@@ -1,5 +1,6 @@
 ---
 title: Netoo+
+layout : false
 tags: []
 originContent: ''
 categories: []
