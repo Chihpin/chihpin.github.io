@@ -1,0 +1,16 @@
+language: node_js
+node_js: stable
+branches:
+  only:
+  - source
+before_install:
+- git config --global user.name "TravisBot"
+- git config --global user.email "travis.bot@travis-ci.org"
+- sed -i "s,__GITHUB_TOKEN__,${GITHUB_TOKEN},g" _config.yml
+install:
+- yarn
+script:
+- hexo clean
+- hexo generate
+- hexo deploy
+after_success:s
